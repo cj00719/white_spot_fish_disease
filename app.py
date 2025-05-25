@@ -14,7 +14,7 @@ st.write("Upload or capture an image to classify shrimp as **Healthy** or **Infe
 uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png"])
 capture_image = st.camera_input("Take a photo")
 
-model = load_model("white_spot_cnn_model1.h5")
+model = load_model("white_spot_cnn_model1_float16.h5")
 CLASS_NAMES = ['Healthy', 'Infected']
 
 def predict(image):
